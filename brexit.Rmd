@@ -118,7 +118,7 @@ How is the story this visualisation telling different than the story the previou
 
 ```{r}
 ggplot(brexit_summary, aes(x = proportion, y = opinion, fill = opinion)) +
-  geom_bar(stat = "identity", position = "dodge") + facet_wrap(~region, nrow = 1) + guides(fill = FALSE) +
+  geom_bar(stat = "identity", position = "dodge") + guides(fill = FALSE) +
   labs(title = "Was Britain right/wrong to vote to leave EU? In percentage",
     subtitle = "YouGov Survey Results, 2-3 September 2019",
     caption = "Source: bit.ly/2lCJZVg") + 
