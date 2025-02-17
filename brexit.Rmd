@@ -117,7 +117,7 @@ Recreate the same visualisation from the previous exercise, this time dodging th
 How is the story this visualisation telling different than the story the previous plot tells?
 
 ```{r}
-ggplot(brexit_summary, aes(x = proportion, y = opinion, fill = opinion)) +
+ggplot(brexit_summary, aes(x = opinion, y = proportion, fill = opinion)) +
   geom_bar(stat = "identity", position = "dodge") + guides(fill = FALSE) +
   labs(title = "Was Britain right/wrong to vote to leave EU? In percentage",
     subtitle = "YouGov Survey Results, 2-3 September 2019",
@@ -127,6 +127,6 @@ ggplot(brexit_summary, aes(x = proportion, y = opinion, fill = opinion)) +
     "Right" = "#67a9cf",
     "Don't know" = "gray"
   )) +
-  scale_x_continuous(labels = scales::percent) +
+  scale_y_continuous(labels = scales::percent) +
   theme_minimal()
 ```
